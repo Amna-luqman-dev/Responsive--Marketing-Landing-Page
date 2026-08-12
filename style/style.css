@@ -34,7 +34,7 @@ body {
   font-weight: 700;
   color: #2b2d42;
   text-decoration: none;
-  letter-spacing: 1px;
+  letter-spacing: 2px;
 }
 
 /* --- NAV LINKS --- */
@@ -42,7 +42,8 @@ body {
   display: flex;
   list-style: none;
   align-items: center;
-  gap: 2rem;
+  gap: 3rem;
+  font-size: 1.3rem;
 }
 
 .nav-links a {
