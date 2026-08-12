@@ -23,20 +23,43 @@
 
       <!-- NAVIGATION LINKS -->
       <ul class="nav-links">
-        <li><a href="home.html">Home</a></li>
-        <li><a href="product.html">Korean skin care</a></li>
-        <li><a href="Services.html">Facial care</a></li>
-        <li><a href="Services.html">skin care</a></li>
-        <li><a href="makeup.html">Make-up</a></li>
-        <li class="mobile-btn"><a href="#order" class="btn-order">Order Now</a></li>
+        <li><a href="#home">Home</a></li>
+        <li><a href="#product">Korean skin care</a></li>
+        <li><a href="#services">Facial care</a></li>
+        <li><a href="#services">skin care</a></li>
+        <li><a href="#makeup">Make-up</a></li>
+        <li class="mobile-btn"><a href="/contact.html" class="btn-order">Order Now</a></li>
       </ul>
 
       <!-- DESKTOP ORDER NOW BUTTON -->
       <div class="nav-btn">
-        <a href="#order" class="btn-order">Order Now</a>
+        <a href="/contact.html" class="btn-order">Order Now</a>
       </div>
     </nav>
   </header>
+
+  <section id="home"></section>
+  <section id="product"></section>
+  <section id="services"></section>
+    <section id="services"></section>
+  <section id="makeup"></section>
+
+  <section id="footer"></section>
+  <script>
+    // JS to load external HTML components
+    function loadHTML(id, file) {
+      fetch(file)
+        .then(res => res.text())
+        .then(data => document.getElementById(id).innerHTML = data);
+    }
+
+    loadHTML("home", "home.html");
+    loadHTML("product", "product.html");
+    loadHTML("services", "services.htm;");
+    loadHTML("services", "services.html");
+    loadHTML("contact", "contact.html");
+   loadHTML("footer", "footer.html");
+  </script>
 
 </body>
 </html>
