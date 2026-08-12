@@ -1,0 +1,156 @@
+/* --- RESET & GENERAL STYLES --- */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+  background-color: #f4f6f9;
+}
+
+/* --- HEADER & NAVBAR --- */
+.header {
+  background-color: #ffffff;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 1rem 2rem;
+}
+
+/* --- LOGO --- */
+.logo {
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: #2b2d42;
+  text-decoration: none;
+  letter-spacing: 1px;
+}
+
+/* --- NAV LINKS --- */
+.nav-links {
+  display: flex;
+  list-style: none;
+  align-items: center;
+  gap: 2rem;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: #4a5568;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+  color: #3182ce;
+}
+
+/* --- ORDER NOW BUTTON --- */
+.btn-order {
+  background-color: #3182ce;
+  color: #ffffff !important;
+  padding: 0.6rem 1.4rem;
+  border-radius: 25px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  display: inline-block;
+}
+
+.btn-order:hover {
+  background-color: #2b6cb0;
+  transform: translateY(-2px);
+}
+
+/* Hide mobile button inside links for desktop */
+.mobile-btn {
+  display: none;
+}
+
+/* --- HAMBURGER MENU & TOGGLE (HIDDEN ON DESKTOP) --- */
+.menu-toggle, .hamburger {
+  display: none;
+}
+
+/* --- RESPONSIVE DESIGN (MOBILE & TABLET) --- */
+@media (max-width: 768px) {
+  /* Hide Desktop Button */
+  .nav-btn {
+    display: none;
+  }
+
+  .mobile-btn {
+    display: block;
+    margin-top: 1rem;
+  }
+
+  /* Hamburger Icon Styling */
+  .hamburger {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 28px;
+    height: 20px;
+    cursor: pointer;
+  }
+
+  .hamburger span {
+    height: 3px;
+    width: 100%;
+    background-color: #2b2d42;
+    border-radius: 3px;
+    transition: all 0.3s ease;
+  }
+
+  /* Mobile Dropdown Menu */
+  .nav-links {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    background-color: #ffffff;
+    flex-direction: column;
+    align-items: center;
+    padding: 1.5rem 0;
+    gap: 1.2rem;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    
+    /* Smooth toggle effect using max-height */
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.4s ease-in-out, padding 0.3s ease;
+  }
+
+  .menu-toggle {
+    display: none;
+  }
+
+  /* Toggle Menu Open when Hamburger is Clicked */
+  .menu-toggle:checked ~ .nav-links {
+    max-height: 300px;
+  }
+
+  /* Hamburger Animation */
+  .menu-toggle:checked ~ .hamburger span:nth-child(1) {
+    transform: translateY(8.5px) rotate(45deg);
+  }
+
+  .menu-toggle:checked ~ .hamburger span:nth-child(2) {
+    opacity: 0;
+  }
+
+  .menu-toggle:checked ~ .hamburger span:nth-child(3) {
+    transform: translateY(-8.5px) rotate(-45deg);
+  }
+}
