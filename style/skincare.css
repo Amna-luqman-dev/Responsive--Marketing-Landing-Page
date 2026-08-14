@@ -1,0 +1,115 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #fdf8f6;
+    color: #333;
+}
+
+/* Hero Section */
+.hero-content {
+    max-width: 1200px;
+    min-height: 100vh;
+    margin: auto;
+    padding: 70px 50px;
+
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    gap: 60px;
+}
+
+/* Image */
+.hero-content img {
+    width: 100%;
+    max-width: 480px;
+    height: 520px;
+    object-fit: cover;
+
+    border-radius: 25px;
+    display: block;
+    margin: auto;
+
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.12);
+}
+
+/* Text Section */
+.text {
+    padding: 20px;
+}
+
+.hero-content h2 {
+    font-size: 48px;
+    line-height: 1.2;
+    color: #5c4540;
+    margin-bottom: 25px;
+}
+
+.hero-content p {
+    font-size: 17px;
+    line-height: 1.8;
+    color: #6d6260;
+    margin-bottom: 30px;
+}
+
+/* Button */
+.btn {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.btn button {
+    padding: 14px 28px;
+    border: none;
+    border-radius: 30px;
+    background-color: #b98278;
+    cursor: pointer;
+
+    transition: all 0.3s ease;
+    box-shadow: 0 8px 20px rgba(185, 130, 120, 0.25);
+}
+
+.btn a {
+    text-decoration: none;
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.btn button:hover {
+    background-color: #8f625a;
+    transform: translateY(-3px);
+    box-shadow: 0 12px 25px rgba(143, 98, 90, 0.3);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+
+    .hero-content {
+        grid-template-columns: 1fr;
+        padding: 40px 25px;
+        gap: 30px;
+    }
+
+    .hero-content img {
+        height: 400px;
+    }
+
+    .hero-content h2 {
+        font-size: 36px;
+        text-align: center;
+    }
+
+    .hero-content p {
+        text-align: center;
+    }
+
+    .btn {
+        justify-content: center;
+    }
+}
